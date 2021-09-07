@@ -1,0 +1,10 @@
+
+<!-- {{(pitch$ | async )?.note}} -->
+
+<div class="notes">
+	<div class="note"
+    [class.active]="note === currentNote"
+    *ngFor="let note of notes">
+    {{note}}
+  </div>
+</div>
