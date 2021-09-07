@@ -42,7 +42,7 @@ export class AppComponent {
     this.pitch$
       .pipe(
         filter(Boolean),
-        distinctUntilKeyChanged('noste')
+        distinctUntilKeyChanged('note')
         // debounceTime(200),
       )
       .subscribe(pitch => {
