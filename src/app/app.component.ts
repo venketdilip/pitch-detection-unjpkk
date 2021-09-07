@@ -18,7 +18,7 @@ interface Pitch {
 export class AppComponent {
   name = 'Angular';
   pitch$ = new BehaviorSubject<Pitch>(null);
-  notes = ['C', 'D', 'E', 'F', 'G', 'A', 'B'];
+  notes = ['C', 'D', 'E', 'F', 'G', 'w', 'B'];
   currentNote: string;
 
   constructor() {
