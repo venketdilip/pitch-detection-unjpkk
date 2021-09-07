@@ -18,7 +18,7 @@ interface Pitch {
 export class AppComponent {
   name = 'Angular';
   pitch$ = new BehaviorSubject<Pitch>(null);
-  notes = ['C', 'D', 'E', 'F', 'G', 'w', 'B'];
+  notes = ['C', 'D', 'E', 'F', 'G', 'A', 'B'];
   currentNote: string;
 
   constructor() {
@@ -33,7 +33,6 @@ export class AppComponent {
     //   });
     // }, () => { })
 
-
     const analyser = new pitchAnalyser({
       callback: (payload: Pitch) => {
         this.pitch$.next(payload);
@@ -43,7 +42,7 @@ export class AppComponent {
     this.pitch$
       .pipe(
         filter(Boolean),
-        distinctUntilKeyChanged('note'),
+        distinctUntilKeyChanged('noste')
         // debounceTime(200),
       )
       .subscribe(pitch => {
